@@ -1,0 +1,185 @@
+{
+    "use_gpu": false,
+    "hide_web": false,
+    "my_nickname": "机器人名字",
+    "auto_reply_enabled": false,
+    "command_user": "故里何日还",
+    "command_silent_mode": false,
+    "warmup_frequency": 60,
+    "warmup_no_danmu_time": 120,
+    "reply_interval": 4,
+    "random_jitter": 2.0,
+    "reply_rules": [
+        {
+            "kw": "测试",
+            "resp": "测试通过~|测试成功！|功能正常",
+            "mode": "随机挑一",
+            "cooldown": 10,
+            "active": true
+        },
+        {
+            "kw": "你好|在吗|主播好",
+            "resp": "你好，欢迎来到直播间~|在的，有什么可以帮您|主播好，欢迎新朋友",
+            "mode": "随机挑一",
+            "cooldown": 15,
+            "active": true
+        },
+        {
+            "kw": "怎么买|哪里买|怎么下单",
+            "resp": "点击左上角粉丝群查看详情|喜欢的可以截图咨询哦|可以私信咨询购买方式",
+            "mode": "随机挑一",
+            "cooldown": 15,
+            "active": false
+        },
+        {
+            "kw": "怎么进群|哪里加群|群怎么进",
+            "resp": "点击头像进入粉丝群|左上角粉丝群欢迎加入|头像处可以加入粉丝群",
+            "mode": "随机挑一",
+            "cooldown": 15,
+            "active": false
+        }
+    ],
+    "advanced_reply_rules": [
+        {
+            "pattern": ".*测试.*",
+            "resp": "高级回复模式测试通过~|正则表达式匹配成功！|测试功能正常",
+            "mode": "随机挑一",
+            "cooldown": 10,
+            "active": true,
+            "description": "匹配包含'测试'的弹幕（示例：测试、测试一下、功能测试等）",
+            "ignore_punctuation": true,
+            "at_reply": false
+        },
+        {
+            "pattern": "(你好|在吗|主播好).*",
+            "resp": "你好，欢迎来到直播间~|在的，有什么可以帮您|主播好，欢迎新朋友",
+            "mode": "随机挑一",
+            "cooldown": 15,
+            "active": false,
+            "description": "匹配问候语（示例：你好、在吗、主播好等）",
+            "ignore_punctuation": true,
+            "at_reply": false
+        },
+        {
+            "pattern": "(怎么|如何|怎样|哪里|在哪).*(买|下单|拍|购买)",
+            "resp": "点击左上角粉丝群查看详情|喜欢的可以截图咨询哦|可以私信咨询购买方式",
+            "mode": "随机挑一",
+            "cooldown": 15,
+            "active": false,
+            "description": "匹配各种购买询问的表达方式（示例：怎么买、在哪里下单等）",
+            "ignore_punctuation": true,
+            "at_reply": false
+        },
+        {
+            "pattern": "(进|加|加入).*群",
+            "resp": "点击头像进入粉丝群|左上角粉丝群欢迎加入|头像处可以加入粉丝群",
+            "mode": "随机挑一",
+            "cooldown": 15,
+            "active": false,
+            "description": "匹配各种进群询问的表达方式（示例：怎么进群、加入群等）",
+            "ignore_punctuation": true,
+            "at_reply": false
+        },
+        {
+            "pattern": ".*关注.*",
+            "resp": "@感谢关注，欢迎常来~|@谢谢关注，记得常来看看哦|@关注成功，欢迎加入我们",
+            "mode": "随机挑一",
+            "cooldown": 20,
+            "active": false,
+            "description": "匹配包含'关注'的弹幕，并@回复用户（示例：关注了、点关注等）",
+            "ignore_punctuation": true,
+            "at_reply": true
+        }
+    ],
+    "specific_rules": [
+        {
+            "kw": "测试@",
+            "resp": "@回复测试通过~|@回复功能正常|@回复测试成功！",
+            "mode": "随机挑一",
+            "cooldown": 10,
+            "active": true
+        },
+        {
+            "kw": "你好|在吗|主播好",
+            "resp": "@你好，欢迎来到直播间~|@在的，有什么可以帮您|@主播好，欢迎新朋友",
+            "mode": "随机挑一",
+            "cooldown": 15,
+            "active": false
+        },
+        {
+            "kw": "关注|点关注",
+            "resp": "@感谢关注，欢迎常来~|@谢谢关注，记得常来看看哦|@关注成功，欢迎加入我们",
+            "mode": "随机挑一",
+            "cooldown": 20,
+            "active": false
+        }
+    ],
+    "warmup_msgs": "欢迎来到直播间|喜欢主播点点关注",
+    "warmup_rules": [
+        {
+            "trigger_type": "无弹幕触发",
+            "name": "默认暖场",
+            "messages": "欢迎来到直播间|喜欢主播点点关注|新来的朋友可以点个关注哦",
+            "mode": "随机挑一",
+            "min_no_danmu_time": 60,
+            "max_no_danmu_time": 0,
+            "cooldown": 120,
+            "active": true
+        }
+    ],
+    "agreement_accepted": true,
+    "queue_mode": "轮询",
+    "queue_time_window": 5.0,
+    "queue_lock_timeout": 30.0,
+    "account_priorities": {},
+    "strict_single_reply": true,
+    "allow_multiple_reply": false,
+    "auto_cleanup_locks": true,
+    "deadlock_detection": true,
+    "max_lock_history": 1000,
+    "random_space_insert_enabled": true,
+    "audio_keyword_rules": [],
+    "audio_timer_rules": [],
+    "audio_enabled": true,
+    "tts_rules": [],
+    "tts_enabled": true,
+    "tts_speak_all_danmu": true,
+    "tts_block_keywords": [],
+    "tts_queue_timeout": 10.0,
+    "danmu_display_enabled": false,
+    "cdk_activation": {
+        "cdk": "eyJjcmVhdGVfdGltZSI6MTc2OTUxMTQ1OCwiZXhwaXJlX3RpbWUiOjE3NzgwNjUwNTgsImZlYXR1cmVzIjpbImFkdmFuY2VkX3JlcGx5IiwiYWlfcmVwbHkiLCJjb21tYW5kIiwic3BlY2lmaWNfcmVwbHkiLCJ3YXJtdXAiXSwibWFjaGluZV9jb2RlIjpudWxsfQ==-c3e4ac65da3292540c0279d51b9818775093c5b404c64ca59fb3e1bb1fff014f",
+        "features": [
+            "specific_reply",
+            "advanced_reply",
+            "warmup",
+            "command",
+            "ai_reply"
+        ],
+        "expire_time": 1778065058,
+        "activate_time": 1769511476,
+        "machine_code": "29ed6a686fb7aab3"
+    },
+    "auth_feature_states": {
+        "specific_reply_enabled": false,
+        "advanced_reply_enabled": false,
+        "warmup_enabled": false,
+        "command_enabled": true
+    },
+    "ai_reply_enabled": true,
+    "ai_reply_api_key": "sk-486ca90f1a274a8f88b3490d6fab6762",
+    "ai_reply_role": "custom",
+    "ai_reply_system_prompt": "你是一个抖音直播间的智能助手，负责回复观众的弹幕。回复要简洁、友好、有趣，通常不超过20字。如果观众问问题，要给出有用的回答；如果是闲聊，要热情互动。不要重复相同的内容，要根据上下文灵活回复。目前直播场景为网页Html设计问答,python爬虫和桌面应用程序开发",
+    "ai_reply_max_history": 20,
+    "ai_reply_clothing_category": "",
+    "ai_reply_clothing_height": 165,
+    "ai_reply_clothing_weight": 55,
+    "ai_reply_filter_min_length": 2,
+    "ai_reply_filter_emoji_only": true,
+    "ai_reply_filter_numbers_only": true,
+    "ai_reply_filter_punctuation_only": true,
+    "ai_reply_filter_repeated_chars": true,
+    "ai_reply_filter_keywords": [],
+    "ai_reply_require_keywords": false,
+    "ai_reply_cdk": "eyJjcmVhdGVfdGltZSI6MTc2OTUxMTQ1OCwiZXhwaXJlX3RpbWUiOjE3NzgwNjUwNTgsImZlYXR1cmVzIjpbImFkdmFuY2VkX3JlcGx5IiwiYWlfcmVwbHkiLCJjb21tYW5kIiwic3BlY2lmaWNfcmVwbHkiLCJ3YXJtdXAiXSwibWFjaGluZV9jb2RlIjpudWxsfQ==-c3e4ac65da3292540c0279d51b9818775093c5b404c64ca59fb3e1bb1fff014f"
+}

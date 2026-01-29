@@ -1,0 +1,64 @@
+[
+    {
+        "name": "北北在哪里",
+        "nickname": "迷宫梦",
+        "url": "https://live.douyin.com/775678740581?action_type=click&anchor_id=&enter_from_merge=personal_homepage&enter_method=web_video_head&enter_method_temai=web_video_head&group_id=undefined&is_livehead_preview_mini_window_show=&is_replaced_live=0&live_position=undefined&mini_window_show_type=&request_id=undefined&room_id=undefined&search_tab=undefined&web_card_rank=&web_live_page=",
+        "enabled": true,
+        "warmup_msgs": "单独暖场1|单独暖场2",
+        "warmup_rules": [
+            {
+                "trigger_type": "无弹幕触发",
+                "name": "默认暖场",
+                "messages": "单独暖场1|单独暖场2",
+                "mode": "随机挑一",
+                "min_no_danmu_time": 120,
+                "max_no_danmu_time": 0,
+                "cooldown": 60,
+                "active": false
+            }
+        ]
+    },
+    {
+        "name": "北北的大哥",
+        "nickname": "北北的大哥",
+        "url": "https://live.douyin.com/775678740581",
+        "enabled": true,
+        "warmup_msgs": "单独暖场3|单独暖场4",
+        "warmup_rules": [
+            {
+                "trigger_type": "无弹幕触发",
+                "name": "默认暖场",
+                "messages": "单独暖场3|单独暖场4",
+                "mode": "随机挑一",
+                "min_no_danmu_time": 120,
+                "max_no_danmu_time": 0,
+                "cooldown": 60,
+                "active": false
+            }
+        ]
+    },
+    {
+        "name": "1",
+        "nickname": "2",
+        "url": "https://live.douyin.com/645268872452?anchor_id=1977387822090275&follow_status=0&is_vs=0&vs_ep_group_id=&vs_episode_id=&vs_episode_stage=&vs_season_id=",
+        "enabled": true,
+        "reply_rules": [],
+        "specific_rules": [],
+        "warmup_msgs": "欢迎来到直播间|喜欢主播点点关注",
+        "auto_reply_enabled": false,
+        "specific_reply_enabled": false,
+        "warmup_enabled": false
+    },
+    {
+        "name": "小号2",
+        "nickname": "北北",
+        "url": "https://live.douyin.com/775678740581",
+        "enabled": true,
+        "reply_rules": [],
+        "specific_rules": [],
+        "warmup_msgs": "欢迎来到直播间|喜欢主播点点关注",
+        "auto_reply_enabled": false,
+        "specific_reply_enabled": false,
+        "warmup_enabled": false
+    }
+]
